@@ -1,0 +1,28 @@
+<% include ./partials/header %> 
+
+ <div class="container">
+     <header class="jumbotron" style="background:rgb(48, 93, 128)">
+         <div class="container" style="color:white">
+             <h1><i class="fa fa-globe" aria-hidden="true"></i> Geographical Indications</h1>
+             <p>View All the geagraphical Indication belonging to India</p>
+         </div>
+     </header>
+     
+     <div class="row text-center" style="display:flex; flex-wrap: wrap;">
+        <% gis.forEach(function(gi){ %>
+            <div class="col-md-3 col-sm-6">
+                <div class="thumbnail">
+                   <img src="<%= gi.image %>">
+                   <div class="caption">
+                       <h4><%= gi.name %></h4>
+                   </div>
+                   <p>
+                       <a href="/gis/<%=gi._id%>" class="btn btn-primary">More Info</a>
+                   </p>
+                </div>
+            </div>
+        <% }); %>
+    </div>
+</div>
+
+<% include ./partials/footer %>

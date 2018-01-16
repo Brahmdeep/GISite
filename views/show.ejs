@@ -1,0 +1,22 @@
+<% include ./partials/header %>
+<div class="container">
+    <div class="row">
+        <div class="col-md-9">
+            <div class="thumbnail">
+                <img class="img-responsive" src="<%= gi.image %>">
+                <div class="caption-full">
+                    <h4><a><%=gi.name%></a></h4>
+                    <p><%= gi.description %></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<% include ./partials/footer %>
+
+
+<!-- 
+<%=gi.name%>
+<img src="<%=gi.image%>" alt="">
+<%=gi.description%> -->
